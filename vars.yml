@@ -36,3 +36,11 @@
     - name: Access a Variable
       ansible.builtin.debug:
         msg: URL == {{URL}}
+
+- name: Access a fact
+  hosts: all
+  connection: local
+  tasks:
+    - name: Access a Variable
+      ansible.builtin.debug:
+        msg: Ansible Host Name == {{ansible_fqdn}}
