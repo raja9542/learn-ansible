@@ -66,3 +66,6 @@
     - name: Print output only
       ansible.builtin.debug:
         msg: "{{out.stdout}}"
+    - name: Set A Fact
+      ansible.builtin.set_fact:
+        OUTPUT: "{{out.stdout}}"
