@@ -28,6 +28,7 @@
       ansible.builtin.debug:
         msg: URL == {{URL}}
 
+
 - name: Declare a Variable from Inventory File
   hosts: all
   connection: local
