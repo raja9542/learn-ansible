@@ -69,3 +69,11 @@
     - name: Set A Fact
       ansible.builtin.set_fact:
         OUTPUT: "{{out.stdout}}"
+
+- name: Access a fact
+  hosts: all
+  connection: local
+  tasks:
+    - name: Access a Variable
+      ansible.builtin.debug:
+        msg: Ansible Host Name == {{OUTPUT}}
