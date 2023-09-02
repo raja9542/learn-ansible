@@ -55,3 +55,14 @@
     - name: Print out
       ansible.builtin.debug:
         msg: "{{out}}"
+
+- name: Register a Variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: Run a shell cmd
+      ansible.builtin.shell: uptime
+      register: out
+    - name: Print output onlr
+      ansible.builtin.debug:
+        msg: "{{out.stdout}}"
