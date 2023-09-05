@@ -2,7 +2,7 @@
   hosts: all
   connection: local
   vars:
-    a: 10
+    a: 100
     b: true
   tasks:
     - name: String Conditions
