@@ -1,8 +1,21 @@
 - name: Demo on conditions
   hosts: all
   connection: local
+  vars:
+    a: 10
+    b: true
   tasks:
     - name: String Conditions
       debug:
         msg: fruit name is apple
       when: fruit_name == "apple"
+
+    - name: Numerical Conditions
+      debug:
+        msg: a is greater than 10
+      when: a > 10
+
+    - name: Boolean conditions
+      debug:
+        msg: b is true
+      when: b  # b is true
