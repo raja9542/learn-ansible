@@ -27,6 +27,8 @@
     - name: Access a Variable From File
       ansible.builtin.debug:
         msg: URL == {{URL}}
+# Declaring a vars_files is not possible under tasks level
+
 
 
 - name: Declare a Variable from Inventory File
